@@ -1,8 +1,12 @@
 # Pandas Data Processing Project
 
 ## Overview
-This project demonstrates a basic data processing pipeline using Python and Pandas.  
-The goal is to ingest raw data, clean and transform it, and produce an analytics-ready dataset.
+This project demonstrates a simple data processing pipeline using **Python and Pandas**.  
+It focuses on ingesting raw employee data, cleaning and transforming it, and generating an analytics-ready dataset suitable for reporting or downstream ETL processes.
+
+The project reflects a common **data engineering preprocessing workflow**.
+
+---
 
 ## Project Structure
 PANDAS-API-PROJECT/
@@ -12,47 +16,40 @@ PANDAS-API-PROJECT/
 │ └── employees.csv # Input dataset
 ├── output/
 │ └── final_clean_data.csv # Processed output
-└── README.md
+└── README.md # Project documentation
+
+---
 
 ## Key Features
-- Data ingestion from CSV files
-- Data inspection using `head()` and `info()`
-- Handling missing values
-- Sorting and conditional transformations
-- Column creation using business logic
-- Exporting clean data to CSV
+- Data ingestion from CSV files  
+- Initial data inspection using `head()` and `info()`  
+- Handling missing values  
+- Sorting and conditional transformations  
+- Creating new columns using business logic  
+- Exporting cleaned data to CSV  
+
+---
 
 ## Technologies Used
-- Python
-- Pandas
-- Git & GitHub
+- Python  
+- Pandas  
+- Git & GitHub  
+
+---
 
 ## How to Run
-1. Clone the repository
-2. Navigate to the project folder
-3. Run:
-   ```bash
-   python pandas_project.py
-Output will be generated in the output/ folder
 
+1. Navigate to the project directory:
+   ```bash
+   cd PANDAS-API-PROJECT
+Run the script:
+python pandas_project.py
+The processed output will be generated in the output/ directory.
 Use Case
 
-This project simulates a real-world data engineering preprocessing step where raw employee data is cleaned and transformed before further analytics or ETL processing.
+This project represents a typical data engineering use case where raw employee data is cleaned and transformed before being used for analytics, reporting, or further ETL processing.
 
+Version Control
 
----
-
-## ✅ STEP 3: Save the file
-
-After saving, do **NOT** change anything else.
-
----
-
-## ✅ STEP 4: Commit the README
-
-Run these commands in terminal (inside the project folder):
-
-```bash
-git add README.md
-git commit -m "Add project README"
-git push
+This project is version-controlled using Git and hosted on GitHub.
+Changes were committed incrementally during development to track improvements and updates.
