@@ -10,11 +10,7 @@ print(df)
 
 # --------------------------------------------------
 # STEP 2: Handle missing salary values
-# Logic:
-# 1. Fill using department-wise average
-# 2. If still NaN, fill using overall average
 # --------------------------------------------------
-
 df["salary"] = df.groupby("department")["salary"].transform(
     lambda x: x.fillna(x.mean())
 )
@@ -34,38 +30,38 @@ print("\nAfter removing duplicates:")
 print(df)
 
 # --------------------------------------------------
-# STEP 4: FILTERING (BUSINESS RULES)
+# STEP 4: Filtering (business rules)
 # --------------------------------------------------
-# Rule 1: Keep only employees with salary >= 50000
 filtered_df = df[df["salary"] >= 50000]
-
-# Rule 2: Keep only IT and Finance departments
 filtered_df = filtered_df[filtered_df["department"].isin(["IT", "Finance"])]
 
-print("\nAfter applying filters (salary >= 50000 and IT/Finance only):")
+print("\nAfter filtering:")
 print(filtered_df)
 
 # --------------------------------------------------
-# STEP 5: Sorting data
+# STEP 5: GroupBy & Aggregations
 # --------------------------------------------------
-filtered_df = filtered_df.sort_values(by="salary", ascending=False)
-
-# --------------------------------------------------
-# STEP 6: Create derived column
-# --------------------------------------------------
-filtered_df["salary_category"] = filtered_df["salary"].apply(
-    lambda x: "High" if x >= 60000 else "Medium"
+dept_summary = (
+    filtered_df
+    .groupby("department")
+    .agg(
+        avg_salary=("salary", "mean"),
+        employee_count=("emp_id", "count")
+    )
+    .reset_index()
 )
 
-print("\nFinal transformed data:")
-print(filtered_df)
+print("\nDepartment-wise summary:")
+print(dept_summary)
 
 # --------------------------------------------------
-# STEP 7: Save cleaned & filtered data
+# STEP 6: Save outputs
 # --------------------------------------------------
 filtered_df.to_csv("output/final_clean_data.csv", index=False)
+dept_summary.to_csv("output/department_summary.csv", index=False)
 
 print("\nPipeline completed successfully")
+
 
 
 
