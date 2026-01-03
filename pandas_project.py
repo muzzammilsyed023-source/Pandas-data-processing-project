@@ -15,12 +15,10 @@ print(df)
 # 2. If still NaN, fill using overall average
 # --------------------------------------------------
 
-# Fill missing salary using department average
 df["salary"] = df.groupby("department")["salary"].transform(
     lambda x: x.fillna(x.mean())
 )
 
-# Fill remaining NaN (edge case: department has all NaN)
 overall_mean_salary = df["salary"].mean()
 df["salary"] = df["salary"].fillna(overall_mean_salary)
 
@@ -32,29 +30,42 @@ print(df)
 # --------------------------------------------------
 df = df.drop_duplicates()
 
-print("\nAfter removing duplicate rows:")
+print("\nAfter removing duplicates:")
 print(df)
 
 # --------------------------------------------------
-# STEP 4: Sort employees by salary (descending)
+# STEP 4: FILTERING (BUSINESS RULES)
 # --------------------------------------------------
-df = df.sort_values(by="salary", ascending=False)
+# Rule 1: Keep only employees with salary >= 50000
+filtered_df = df[df["salary"] >= 50000]
+
+# Rule 2: Keep only IT and Finance departments
+filtered_df = filtered_df[filtered_df["department"].isin(["IT", "Finance"])]
+
+print("\nAfter applying filters (salary >= 50000 and IT/Finance only):")
+print(filtered_df)
 
 # --------------------------------------------------
-# STEP 5: Create derived column (business logic)
+# STEP 5: Sorting data
 # --------------------------------------------------
-df["salary_category"] = df["salary"].apply(
+filtered_df = filtered_df.sort_values(by="salary", ascending=False)
+
+# --------------------------------------------------
+# STEP 6: Create derived column
+# --------------------------------------------------
+filtered_df["salary_category"] = filtered_df["salary"].apply(
     lambda x: "High" if x >= 60000 else "Medium"
 )
 
 print("\nFinal transformed data:")
-print(df)
+print(filtered_df)
 
 # --------------------------------------------------
-# STEP 6: Save cleaned data to output folder
+# STEP 7: Save cleaned & filtered data
 # --------------------------------------------------
-df.to_csv("output/final_clean_data.csv", index=False)
+filtered_df.to_csv("output/final_clean_data.csv", index=False)
 
 print("\nPipeline completed successfully")
+
 
 
