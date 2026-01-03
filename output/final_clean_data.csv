@@ -1,5 +1,5 @@
-emp_id,name,department,salary,age,city,salary_category
-104,John,Finance,70000.0,,,High
-102,Ali,HR,58750.0,,,Medium
-101,Syed,IT,50000.0,,,Medium
-103,Ravi,IT,45000.0,,,Medium
+emp_id,name,department,salary,salary_category
+104,John,Finance,70000.0,High
+102,Ali,HR,58750.0,Medium
+101,Syed,IT,50000.0,Medium
+103,Ravi,IT,45000.0,Medium
