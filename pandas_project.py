@@ -38,8 +38,8 @@ def clean_employee_data(df):
         ["IT", "Finance", "HR", "Sales", "Marketing"]
     )]
 
-    # Sort output by salary (ascending)
-    df = df.sort_values(by="salary", ascending=True).reset_index(drop=True)
+    # Sort output by employee id (ascending)
+    df = df.sort_values(by="emp_id", ascending=True).reset_index(drop=True)
 
     # Create department-level summary
     dept_summary = (
