@@ -3,7 +3,7 @@ import pandas as pd
 def clean_employee_data(
     df: pd.DataFrame,
     min_salary: float = 50000,
-    valid_departments: list = ["IT", "Finance"]
+    valid_departments: list = ["IT", "Finance", "HR", "Sales", "Marketing"]
 ) -> tuple[pd.DataFrame, pd.DataFrame]:
     """
     Cleans and filters employee data.
