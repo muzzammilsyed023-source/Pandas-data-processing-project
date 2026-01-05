@@ -3,7 +3,7 @@ import pandas as pd
 
 def clean_employee_data(df):
     """
-    Clean employee data and generate summary.
+    Clean employee data and generate department summary.
     """
 
     # -----------------------------
@@ -42,7 +42,12 @@ def clean_employee_data(df):
     df = df[df["department"].isin(["IT", "Finance", "HR", "Sales", "Marketing"])]
 
     # -----------------------------
-    # 5. Create department summary
+    # 5. Sort by emp_id (ascending)
+    # -----------------------------
+    df = df.sort_values(by="emp_id", ascending=True)
+
+    # -----------------------------
+    # 6. Create department summary
     # -----------------------------
     dept_summary = (
         df.groupby("department")
@@ -75,6 +80,7 @@ if __name__ == "__main__":
     print("Rows after cleaning:", len(clean_df))
     print("\nSample cleaned data:")
     print(clean_df.head())
+
 
 
 
