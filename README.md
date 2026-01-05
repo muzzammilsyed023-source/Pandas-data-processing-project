@@ -1,12 +1,6 @@
-# Pandas Data Processing Project
+📊 Employee Data Cleaning Pipeline (Pandas)
 
-## Overview
-This project demonstrates a simple data processing pipeline using **Python and Pandas**.  
-It focuses on ingesting raw employee data, cleaning and transforming it, and generating an analytics-ready dataset suitable for reporting or downstream ETL processes.
-
-The project reflects a common **data engineering preprocessing workflow**.
-
----
+A Python–Pandas project that automates the cleaning and transformation of employee CSV data to produce analytics-ready datasets suitable for downstream ETL and reporting workflows.
 
 ## Project Structure
 PANDAS-API-PROJECT/
@@ -18,38 +12,26 @@ PANDAS-API-PROJECT/
 │ └── final_clean_data.csv # Processed output
 └── README.md # Project documentation
 
----
+🔑 Key Steps
 
-## Key Features
-- Data ingestion from CSV files  
-- Initial data inspection using `head()` and `info()`  
-- Handling missing values  
-- Sorting and conditional transformations  
-- Creating new columns using business logic  
-- Exporting cleaned data to CSV  
+Read raw employee data from CSV files
 
----
+Enforce correct data types for key columns
 
-## Technologies Used
-- Python  
-- Pandas  
-- Git & GitHub  
+Handle missing values using department-level and overall salary averages
 
----
+Remove duplicate employee records
 
-## How to Run
+Apply business filters (salary threshold and valid departments)
 
-1. Navigate to the project directory:
-   ```bash
-   cd PANDAS-API-PROJECT
-Run the script:
-python pandas_project.py
-The processed output will be generated in the output/ directory.
-Use Case
+Sort cleaned data and generate a department-level summary
 
-This project represents a typical data engineering use case where raw employee data is cleaned and transformed before being used for analytics, reporting, or further ETL processing.
+📂 Outputs
 
-Version Control
+final_clean_data.csv – Cleaned, filtered, and sorted employee-level data
 
-This project is version-controlled using Git and hosted on GitHub.
-Changes were committed incrementally during development to track improvements and updates.
+department_summary.csv – Aggregated department-wise salary metrics and employee counts
+
+🛠️ Tech Stack
+
+Python · Pandas · Git · GitHub

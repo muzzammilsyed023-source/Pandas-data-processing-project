@@ -3,83 +3,85 @@ import pandas as pd
 
 def clean_employee_data(df):
     """
-    Clean employee data and generate department summary.
+    Cleans employee data and returns:
+    1) Cleaned employee-level data
+    2) Department-level summary
     """
+    df = df.copy()
 
-    # -----------------------------
-    # 1. Fix data types
-    # -----------------------------
-    df["emp_id"] = pd.to_numeric(df["emp_id"], errors="coerce")
-    df["salary"] = pd.to_numeric(df["salary"], errors="coerce")
+    # Convert required columns to numeric
+    df.loc[:, "emp_id"] = pd.to_numeric(df["emp_id"], errors="coerce")
+    df.loc[:, "salary"] = pd.to_numeric(df["salary"], errors="coerce")
 
-    # -----------------------------
-    # 2. Handle missing values
-    # -----------------------------
-    # Drop rows where emp_id or department is missing
-    df = df.dropna(subset=["emp_id", "department"])
+    # Drop rows missing critical fields
+    df = df.dropna(subset=["emp_id", "department"]).copy()
 
     # Fill missing names
-    df["name"] = df["name"].fillna("Unknown")
+    df.loc[:, "name"] = df["name"].fillna("Unknown")
 
     # Fill missing salary using department average
-    df["salary"] = df.groupby("department")["salary"].transform(
-        lambda x: x.fillna(x.mean())
+    df.loc[:, "salary"] = (
+        df.groupby("department")["salary"]
+        .transform(lambda x: x.fillna(x.mean()))
     )
 
-    # If salary is still missing, fill with overall average
+    # Fallback to overall average salary
     overall_avg_salary = df["salary"].mean()
-    df["salary"] = df["salary"].fillna(overall_avg_salary)
+    df.loc[:, "salary"] = df["salary"].fillna(overall_avg_salary)
 
-    # -----------------------------
-    # 3. Remove duplicate employees
-    # -----------------------------
-    df = df.drop_duplicates(subset=["emp_id"])
+    # Remove duplicate employees
+    df = df.drop_duplicates(subset=["emp_id"]).copy()
 
-    # -----------------------------
-    # 4. Apply business filters
-    # -----------------------------
-    df = df[df["salary"] >= 50000]
-    df = df[df["department"].isin(["IT", "Finance", "HR", "Sales", "Marketing"])]
+    # Apply business rules
+    df = df.loc[df["salary"] >= 50000]
+    df = df.loc[df["department"].isin(
+        ["IT", "Finance", "HR", "Sales", "Marketing"]
+    )]
 
-    # -----------------------------
-    # 5. Sort by emp_id (ascending)
-    # -----------------------------
-    df = df.sort_values(by="emp_id", ascending=True)
+    # Sort output by salary (ascending)
+    df = df.sort_values(by="salary", ascending=True).reset_index(drop=True)
 
-    # -----------------------------
-    # 6. Create department summary
-    # -----------------------------
+    # Create department-level summary
     dept_summary = (
-        df.groupby("department")
+        df.groupby("department", as_index=False)
         .agg(
             avg_salary=("salary", "mean"),
             employee_count=("emp_id", "count")
         )
-        .reset_index()
     )
 
     return df, dept_summary
 
 
-# ===============================
-# MAIN PROGRAM
-# ===============================
 if __name__ == "__main__":
-    # Read CSV
-    employees_df = pd.read_csv("data/employees.csv")
-    print("Original rows:", len(employees_df))
+    try:
+        # Read input data
+        employees_df = pd.read_csv("data/employees.csv")
 
-    # Clean data
-    clean_df, summary_df = clean_employee_data(employees_df)
+        # Run cleaning pipeline
+        clean_df, summary_df = clean_employee_data(employees_df)
 
-    # Save outputs
-    clean_df.to_csv("output/final_clean_data.csv", index=False)
-    summary_df.to_csv("output/department_summary.csv", index=False)
+        # Check memory usage of cleaned data
+        memory_mb = clean_df.memory_usage(deep=True).sum() / (1024 ** 2)
+        print(f"Cleaned DataFrame memory usage: {memory_mb:.2f} MB")
 
-    print("\n✅ Pipeline completed successfully")
-    print("Rows after cleaning:", len(clean_df))
-    print("\nSample cleaned data:")
-    print(clean_df.head())
+        # Save outputs
+        clean_df.to_csv("output/final_clean_data.csv", index=False)
+        summary_df.to_csv("output/department_summary.csv", index=False)
+
+        print("✅ Pipeline completed successfully")
+
+    except FileNotFoundError:
+        print("❌ Error: employees.csv file not found in the data/ folder")
+
+    except pd.errors.EmptyDataError:
+        print("❌ Error: employees.csv is empty")
+
+    except Exception as e:
+        print(f"❌ Unexpected error occurred: {e}")
+
+
+
 
 
 
