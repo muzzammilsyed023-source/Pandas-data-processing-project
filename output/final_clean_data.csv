@@ -1,4 +1,8 @@
 emp_id,name,department,salary
+101.0,Alice,IT,60000.0
+102.0,Unknown,Finance,75185.10619469026
+106.0,Frank,Marketing,74124.99086757991
+107.0,Unknown,HR,70000.0
 1001.0,Grace,HR,66487.0
 1004.0,Eva,Marketing,72823.0
 1005.0,Grace,Marketing,74124.99086757991
@@ -7,7 +11,7 @@ emp_id,name,department,salary
 1008.0,Grace,Sales,61890.0
 1009.0,Unknown,Sales,109134.0
 1010.0,Eva,Finance,77055.0
-1011.0,David,HR,70889.55701754386
+1011.0,David,HR,70885.67248908296
 1012.0,Helen,Marketing,72287.0
 1013.0,Helen,Finance,108916.0
 1014.0,Charlie,HR,56984.0
@@ -20,7 +24,7 @@ emp_id,name,department,salary
 1027.0,Jane,IT,69882.0
 1028.0,Charlie,Marketing,55923.0
 1029.0,Grace,IT,59165.0
-1030.0,David,HR,70889.55701754386
+1030.0,David,HR,70885.67248908296
 1032.0,Charlie,IT,94965.0
 1034.0,Charlie,Sales,103297.0
 1035.0,Grace,HR,55426.0
@@ -53,7 +57,7 @@ emp_id,name,department,salary
 1083.0,Helen,Marketing,117163.0
 1084.0,Alice,Sales,69310.0
 1085.0,Helen,HR,86088.0
-1086.0,Helen,HR,70889.55701754386
+1086.0,Helen,HR,70885.67248908296
 1087.0,Charlie,Sales,66914.0
 1088.0,Alice,IT,75379.0
 1092.0,Alice,IT,76413.0
@@ -81,12 +85,12 @@ emp_id,name,department,salary
 1128.0,Eva,HR,118204.0
 1131.0,David,Sales,53669.0
 1132.0,Grace,IT,64068.0
-1133.0,Charlie,HR,70889.55701754386
+1133.0,Charlie,HR,70885.67248908296
 1137.0,Ian,HR,111929.0
 1138.0,Eva,Marketing,74124.99086757991
 1139.0,Frank,Finance,105388.0
 1141.0,Jane,IT,101831.0
-1142.0,Grace,IT,73665.4203539823
+1142.0,Grace,IT,73605.22026431718
 1144.0,Grace,Marketing,66451.0
 1146.0,Alice,Sales,61910.0
 1147.0,Ian,IT,66041.0
@@ -104,7 +108,7 @@ emp_id,name,department,salary
 1167.0,Jane,Finance,104696.0
 1169.0,Grace,Marketing,87784.0
 1171.0,Charlie,Sales,116936.0
-1174.0,Alice,IT,73665.4203539823
+1174.0,Alice,IT,73605.22026431718
 1175.0,Helen,HR,62117.0
 1176.0,Alice,Finance,75185.10619469026
 1177.0,Alice,Sales,61910.0
@@ -123,7 +127,7 @@ emp_id,name,department,salary
 1198.0,David,HR,102240.0
 1199.0,Bob,IT,94315.0
 1200.0,Frank,IT,99249.0
-1202.0,Alice,IT,73665.4203539823
+1202.0,Alice,IT,73605.22026431718
 1203.0,Ian,Marketing,98011.0
 1204.0,Frank,Finance,75185.10619469026
 1207.0,David,Sales,86549.0
@@ -151,7 +155,7 @@ emp_id,name,department,salary
 1240.0,Charlie,HR,71323.0
 1242.0,Charlie,Sales,79235.27477477478
 1243.0,David,Marketing,74124.99086757991
-1244.0,Helen,IT,73665.4203539823
+1244.0,Helen,IT,73605.22026431718
 1245.0,Frank,Finance,86273.0
 1247.0,Alice,Finance,106559.0
 1249.0,Unknown,IT,95061.0
@@ -251,7 +255,7 @@ emp_id,name,department,salary
 1408.0,Jane,HR,67487.0
 1410.0,Eva,HR,51223.0
 1413.0,Eva,IT,58380.0
-1414.0,Alice,IT,73665.4203539823
+1414.0,Alice,IT,73605.22026431718
 1415.0,David,Finance,60620.0
 1417.0,Jane,Finance,85316.0
 1418.0,Jane,IT,94041.0
@@ -277,7 +281,7 @@ emp_id,name,department,salary
 1447.0,Charlie,Sales,100476.0
 1448.0,Alice,IT,90920.0
 1449.0,Alice,Sales,93530.0
-1452.0,Charlie,IT,73665.4203539823
+1452.0,Charlie,IT,73605.22026431718
 1453.0,Alice,Finance,119570.0
 1455.0,Helen,Finance,113588.0
 1457.0,Bob,Finance,118340.0
@@ -295,7 +299,7 @@ emp_id,name,department,salary
 1474.0,Eva,Finance,53888.0
 1476.0,Helen,Finance,91063.0
 1477.0,David,Finance,65144.0
-1478.0,Ian,IT,73665.4203539823
+1478.0,Ian,IT,73605.22026431718
 1479.0,Eva,HR,107360.0
 1482.0,Unknown,IT,56189.0
 1483.0,Eva,Sales,72600.0
@@ -412,7 +416,7 @@ emp_id,name,department,salary
 1673.0,Eva,Finance,51621.0
 1674.0,Ian,Marketing,105564.0
 1676.0,Charlie,Marketing,89792.0
-1677.0,David,IT,73665.4203539823
+1677.0,David,IT,73605.22026431718
 1678.0,Alice,HR,64051.0
 1680.0,Helen,Sales,60447.0
 1681.0,Bob,Sales,113930.0
@@ -444,7 +448,7 @@ emp_id,name,department,salary
 1734.0,Ian,HR,104971.0
 1736.0,Grace,IT,64742.0
 1738.0,Helen,Marketing,103997.0
-1740.0,Helen,HR,70889.55701754386
+1740.0,Helen,HR,70885.67248908296
 1745.0,Charlie,Finance,79733.0
 1746.0,Bob,HR,71800.0
 1748.0,Charlie,HR,89063.0
@@ -474,7 +478,7 @@ emp_id,name,department,salary
 1798.0,Jane,Marketing,74629.0
 1799.0,Grace,Marketing,75232.0
 1800.0,Ian,Sales,116544.0
-1801.0,Alice,HR,70889.55701754386
+1801.0,Alice,HR,70885.67248908296
 1802.0,Grace,Sales,80669.0
 1807.0,David,Marketing,113457.0
 1809.0,David,Sales,98673.0
@@ -510,7 +514,7 @@ emp_id,name,department,salary
 1870.0,Unknown,Finance,51800.0
 1871.0,David,Marketing,105939.0
 1872.0,Alice,IT,87828.0
-1875.0,Unknown,IT,73665.4203539823
+1875.0,Unknown,IT,73605.22026431718
 1876.0,Jane,IT,51038.0
 1877.0,Frank,Finance,70846.0
 1878.0,Eva,Sales,117983.0
@@ -522,7 +526,7 @@ emp_id,name,department,salary
 1885.0,Jane,Marketing,107067.0
 1886.0,Eva,Sales,110257.0
 1887.0,Grace,IT,114742.0
-1888.0,Jane,HR,70889.55701754386
+1888.0,Jane,HR,70885.67248908296
 1891.0,Unknown,IT,95794.0
 1897.0,Ian,Finance,115120.0
 1899.0,Frank,Sales,95031.0
@@ -551,7 +555,7 @@ emp_id,name,department,salary
 1939.0,Alice,Sales,111835.0
 1940.0,Grace,Marketing,60090.0
 1941.0,Bob,Finance,117489.0
-1942.0,Eva,IT,73665.4203539823
+1942.0,Eva,IT,73605.22026431718
 1943.0,Helen,Finance,56475.0
 1945.0,Charlie,Sales,73732.0
 1946.0,Grace,Marketing,111623.0
@@ -560,7 +564,7 @@ emp_id,name,department,salary
 1952.0,Charlie,Sales,89165.0
 1953.0,Helen,Sales,99615.0
 1955.0,David,Sales,115751.0
-1956.0,Alice,HR,70889.55701754386
+1956.0,Alice,HR,70885.67248908296
 1957.0,David,HR,89042.0
 1959.0,David,IT,75096.0
 1960.0,Frank,Marketing,101986.0
@@ -674,7 +678,7 @@ emp_id,name,department,salary
 3342.0,Bob,HR,94942.0
 3353.0,Ian,HR,71795.0
 3364.0,Frank,Marketing,66211.0
-3378.0,Ian,IT,73665.4203539823
+3378.0,Ian,IT,73605.22026431718
 3380.0,David,Sales,109026.0
 3383.0,Alice,IT,116127.0
 3384.0,Grace,Sales,119486.0
@@ -687,7 +691,7 @@ emp_id,name,department,salary
 3427.0,Eva,Marketing,59536.0
 3428.0,David,Sales,62208.0
 3433.0,Grace,Sales,102512.0
-3453.0,Grace,IT,73665.4203539823
+3453.0,Grace,IT,73605.22026431718
 3455.0,Alice,HR,87008.0
 3456.0,Unknown,IT,85353.0
 3461.0,Frank,IT,99397.0
@@ -717,7 +721,7 @@ emp_id,name,department,salary
 3552.0,David,IT,73279.0
 3554.0,Bob,Finance,93653.0
 3556.0,Alice,IT,117584.0
-3560.0,Helen,IT,73665.4203539823
+3560.0,Helen,IT,73605.22026431718
 3573.0,Charlie,HR,59131.0
 3574.0,Eva,Marketing,79767.0
 3578.0,Jane,HR,94665.0
@@ -733,13 +737,13 @@ emp_id,name,department,salary
 3640.0,Frank,IT,112756.0
 3643.0,Eva,Marketing,104177.0
 3644.0,Jane,Sales,103989.0
-3650.0,Grace,IT,73665.4203539823
+3650.0,Grace,IT,73605.22026431718
 3651.0,Frank,Marketing,86314.0
 3662.0,Helen,IT,83005.0
 3666.0,Charlie,HR,91925.0
 3670.0,Grace,IT,54901.0
 3671.0,Frank,Sales,114108.0
-3673.0,Jane,HR,70889.55701754386
+3673.0,Jane,HR,70885.67248908296
 3676.0,Alice,Sales,79235.27477477478
 3677.0,Ian,HR,78418.0
 3679.0,Unknown,Finance,53819.0
@@ -749,7 +753,7 @@ emp_id,name,department,salary
 3699.0,Charlie,Marketing,111226.0
 3700.0,Jane,Marketing,51417.0
 3705.0,Unknown,IT,58683.0
-3706.0,Eva,HR,70889.55701754386
+3706.0,Eva,HR,70885.67248908296
 3710.0,Helen,Finance,69124.0
 3720.0,Eva,IT,71359.0
 3725.0,Helen,Marketing,84592.0
@@ -807,7 +811,7 @@ emp_id,name,department,salary
 3912.0,Ian,HR,74942.0
 3917.0,Frank,Sales,78148.0
 3918.0,Bob,Marketing,81688.0
-3921.0,Alice,HR,70889.55701754386
+3921.0,Alice,HR,70885.67248908296
 3922.0,Bob,IT,107110.0
 3923.0,Jane,IT,119709.0
 3926.0,Alice,Marketing,86333.0
@@ -818,7 +822,7 @@ emp_id,name,department,salary
 3963.0,Bob,Marketing,55156.0
 3965.0,Charlie,Sales,81773.0
 3967.0,Helen,IT,91524.0
-3969.0,Unknown,IT,73665.4203539823
+3969.0,Unknown,IT,73605.22026431718
 3970.0,Eva,Marketing,57760.0
 3971.0,Grace,Finance,107662.0
 3972.0,Jane,HR,86441.0

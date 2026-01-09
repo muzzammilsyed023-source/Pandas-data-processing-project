@@ -1569,4 +1569,12 @@ emp_id,name,department,salary
 3997.0,Eva,Engineering,71555.0
 3036.0,Jane,HR,102179.0
 3758.0,David,HR,50585.0
+101,Alice,IT,60000
+102,,Finance,
+103,Charlie,R&D,
+103,CharlieDup,R&D,1200000
+, Eve,Sales,45000
+106,Frank,Marketing,
+107,,HR,70000
+
 
